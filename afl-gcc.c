@@ -308,6 +308,10 @@ static void edit_params(u32 argc, char** argv) {
 /* Main entry point */
 
 int main(int argc, char** argv) {
+  WARNF("Argv");
+  for (int i = 0; i < argc; i++) {
+        WARNF("argv[%d]: %s\n", i, argv[i]);
+  }
 
   if (isatty(2) && !getenv("AFL_QUIET")) {
 
