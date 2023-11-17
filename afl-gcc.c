@@ -308,10 +308,10 @@ static void edit_params(u32 argc, char** argv) {
 /* Main entry point */
 
 int main(int argc, char** argv) {
-  WARNF("Argv");
-  for (int i = 0; i < argc; i++) {
-        WARNF("argv[%d]: %s\n", i, argv[i]);
-  }
+  // WARNF("Argv");
+  // for (int i = 0; i < argc; i++) {
+  //       WARNF("argv[%d]: %s\n", i, argv[i]);
+  // }
 
   if (isatty(2) && !getenv("AFL_QUIET")) {
 
@@ -342,9 +342,9 @@ int main(int argc, char** argv) {
   edit_params(argc, argv);
   
   
-  for(int i=0; i<(cc_par_cnt-1); i++){
-  	WARNF("cc_param[%d] %s\n",i,cc_params[i]);
-  }
+  // for(int i=0; i<(cc_par_cnt-1); i++){
+  // 	WARNF("cc_param[%d] %s\n",i,cc_params[i]);
+  // }
 
   execvp(cc_params[0], (char**)cc_params);
 
